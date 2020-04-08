@@ -1,0 +1,80 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+$box-color: #cfceba;
+
+.grid {
+  border: 1px solid;
+}
+
+h1 {
+  font-size: 90%;
+}
+
+h2 {
+  font-size: 70%;
+}
+
+p {
+  font-size: 50%;
+}
+
+.grid:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.grid-col {
+  float: left;
+  width: 49%;
+  margin-right: 2%;
+  background: #ddd;
+}
+
+.grid-col--4 {
+  margin-right: 0;
+}
+
+/* hide two middle */
+.grid-col--2,
+.grid-col--3 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .grid-col {
+    width: 32%;
+  }
+  .grid-col--2 {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid-col {
+    width: 23.5%;
+  }
+  .grid-col--2,
+  .grid-col--3 {
+    display: block;
+  }
+}
+
+.grid-item {
+  background: $box-color; //#09D;
+  margin-bottom: 20px;
+  border: 2px dotted darkgrey;
+  padding: 10px;
+}
+
+.grid-item--a {
+  height: 80px;
+  background-color: green;
+}
+//.grid-item--b { height: 140px; }
+.grid-item--c {
+  height: 300px;
+}
